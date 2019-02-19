@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 public class Cat {
@@ -13,9 +14,11 @@ public class Cat {
 	        }
 	        return;
 	    //added a catch
-	    } catch (IOException e){
-	    	e.printStackTrace();
-	    }finally {
+	    } catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}finally {
 	        if (input != null) {
 	        	//added a try/catch
 	            try {
