@@ -12,10 +12,12 @@ public class Cat {
 	            System.out.println(line);
 	        }
 	        return;
+	    //added a catch
 	    } catch (IOException e){
 	    	e.printStackTrace();
 	    }finally {
 	        if (input != null) {
+	        	//added a try/catch
 	            try {
 					input.close();
 				} catch (IOException e) {
